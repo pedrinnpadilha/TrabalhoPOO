@@ -35,16 +35,12 @@ public class Main {
 	   
 	    do { 
 	    	
-	    	 System.out.println(
-	 	     "__________________MENU______________________\n "
-	 	     +"1-Cadastrar Professor\n"
-	 	     +"2-Listar Professores com Doutorado\n"
-	 	     +"3-Listar Professores com Mestrado\n "
-	 	     +"4-Pesquisar por nome\n"
-	 	     +"99-Sair\n");
-	 	    
+	    	System.out.println("__________________MENU______________________\n" + "1-Cadastrar Professor\n"
+					+ "2-Listar Professores com Doutorado\n" + "3-Listar Professores com Mestrado\n"
+					+ "4-Listar Turmas\n" + "5-turma + professor \n" + "99-Sair\n");
 
-	 	    System.out.print( "nº: ");
+			System.out.print("Número escolhido ==>>>> ");
+
 
 	 	    numopc = dados.nextInt();
 
