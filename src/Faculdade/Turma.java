@@ -4,6 +4,8 @@ public class Turma {
 	
 		private int numero;
 		private String turno;
+		
+		
 		public int getNumero() {
 			return numero;
 		}

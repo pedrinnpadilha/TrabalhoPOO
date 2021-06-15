@@ -51,6 +51,7 @@ public class Controller {
 		turma.forEach((t) -> {
 			System.out.println("-----------------------------");
 			System.out.println("Codigo: " + t.getNumero());
+			System.out.println("Turno: " + t.getTurno());
 
 			System.out.println("-----------------------------");
 		});

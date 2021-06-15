@@ -15,16 +15,16 @@ public class Main {
 		Controller controller = new Controller();
 		Turma t = new Turma();
 
-		int numero = 123;
-		t.setNumero(numero);
+		t.setNumero(123);
+		t.setTurno("Manhã");
 		controller.adicionarT(t);
-		t = new Turma();
-		numero = 124;
-		t.setNumero(numero);
+		t = new Turma();		
+		t.setNumero(124);
+		t.setTurno("Manhã");
 		controller.adicionarT(t);
-		t = new Turma();
-		numero = 125;
-		t.setNumero(numero);
+		t = new Turma();		
+		t.setNumero(125);
+		t.setTurno("Manhã");
 		controller.adicionarT(t);
 		t = new Turma();
 
