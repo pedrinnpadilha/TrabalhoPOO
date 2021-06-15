@@ -120,7 +120,7 @@ public class Main {
 				}
 				break;
 			case 2:
-				controller.listaPessoas();
+				controller.listaPessoasD();
 				break;
 
 			case 3:

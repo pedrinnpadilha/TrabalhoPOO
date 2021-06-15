@@ -21,7 +21,7 @@ public class Controller {
 		turma.add(t);
 	}
 
-	public void listaPessoas() {
+	public void listaPessoasD() {
 		professorD.forEach((d) -> {
 			System.out.println("-----------------------------");
 			System.out.println("Nome: " + d.getNome());
