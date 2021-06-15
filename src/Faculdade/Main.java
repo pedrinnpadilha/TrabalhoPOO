@@ -9,21 +9,17 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		// Scanner teclado = new Scanner(System.in);
+		
 		Scanner dados = new Scanner(System.in);
-		Scanner dados1 = new Scanner(System.in);
-		Scanner dados2 = new Scanner(System.in);
-		Scanner dados3 = new Scanner(System.in);
-		Scanner dados4 = new Scanner(System.in);
-		Scanner dados5 = new Scanner(System.in);
 		Scanner dados6 = new Scanner(System.in);
 
-		int cod = 123;
+		
 
 		ProfessorDoutorado pd = new ProfessorDoutorado();
 		ProfessorMestre pm = new ProfessorMestre();
 		Controller controller = new Controller();
 		Turma t = new Turma();
+		
 		int numero = 123;
 		t.setNumero(numero);
 		controller.adicionarT(t);
@@ -42,7 +38,8 @@ public class Main {
 		int codigo = 0;
 		double salario = 0;
 		int horas = 0;
-		String tese = "";
+		int te = 0;
+		
 
 		int numopc = 0;
 
@@ -66,36 +63,36 @@ public class Main {
 				int p = dados.nextInt();
 
 				if (p == 1) {
-
+					Scanner teclado = new Scanner(System.in);
 					System.out.println("Nome do professor: ");
-					nome = dados1.nextLine();
+					nome = teclado.nextLine();
 					pd.setNome(nome);
 
 					System.out.println("Idade: ");
-					idade = dados2.nextInt();
+					idade = teclado.nextInt();
 					pd.setIdade(idade);
 
 					System.out.println("Codigo: ");
-					codigo = dados3.nextInt();
+					codigo = teclado.nextInt();
 					pd.setCodigo(codigo);
 
 					System.out.println("Salario: ");
-					salario = dados4.nextDouble();
+					salario = teclado.nextDouble();
 					pd.setSalario(salario);
 
 					System.out.println("Horas: ");
-					horas = dados5.nextInt();
+					horas = teclado.nextInt();
 					pd.setHoras(horas);
 
 					System.out.println("informe o status da teste (1 Aguardando) (2 Aprovada): ");
-					int te = 0;
-					te = dados6.nextInt();
+					
+					te = teclado.nextInt();
 					if (te == 1) {
-						//tese = dados6.nextLine();
+						
 						pd.setTese("Aguardando");
 					}
 					if (te == 2) {
-						//tese = dados6.nextLine();
+						
 						pd.setTese("Aprovada");
 					}
 
@@ -103,24 +100,25 @@ public class Main {
 					pd = new ProfessorDoutorado();
 				}
 				if (p == 2) {
+					Scanner teclado = new Scanner(System.in);
 					System.out.println("Nome do professor: ");
-					nome = dados1.nextLine();
+					nome = teclado.nextLine();
 					pm.setNome(nome);
 
 					System.out.println("Idade: ");
-					idade = dados2.nextInt();
+					idade = teclado.nextInt();
 					pm.setIdade(idade);
 
 					System.out.println("Codigo: ");
-					codigo = dados3.nextInt();
+					codigo = teclado.nextInt();
 					pm.setCodigo(codigo);
 
 					System.out.println("Salario: ");
-					salario = dados4.nextInt();
+					salario = teclado.nextInt();
 					pm.setSalario(salario);
 
 					System.out.println("Horas: ");
-					horas = dados5.nextInt();
+					horas = teclado.nextInt();
 					pm.setHoras(horas);
 
 					controller.adicionarM(pm);

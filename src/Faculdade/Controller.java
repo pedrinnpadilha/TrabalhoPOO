@@ -3,8 +3,6 @@ package Faculdade;
 import java.util.ArrayList;
 
 
-
-
 public class Controller {
 
 	ArrayList<Professor> professorD = new ArrayList<>();
