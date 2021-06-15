@@ -1,5 +1,5 @@
 package Faculdade;
 
-public class ProfessorMestre {
+public class ProfessorMestre extends Professor {
 
 }

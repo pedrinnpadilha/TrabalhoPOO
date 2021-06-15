@@ -54,6 +54,11 @@ public class Professor extends Pessoa
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	public String getTese() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 	}
