@@ -9,19 +9,19 @@ public class Controller {
 	ArrayList<Professor> professorM = new ArrayList<>();
 	ArrayList<Turma> turma = new ArrayList<>();
 
-	public void adicionarD(Professor d) {
+	public void adicionarD(Professor d) {//adiciona um professor com doutorado
 		professorD.add(d);
 	}
 
-	public void adicionarM(Professor m) {
+	public void adicionarM(Professor m) {//adiciona um professor com mestrado
 		professorM.add(m);
 	}
 
-	public void adicionarT(Turma t) {
+	public void adicionarT(Turma t) {//adiciona uma turma
 		turma.add(t);
 	}
 
-	public void listaPessoasD() {
+	public void listaPessoasD() {//lista todos os professores com doutorado
 		professorD.forEach((d) -> {
 			System.out.println("-----------------------------");
 			System.out.println("Nome: " + d.getNome());
@@ -35,7 +35,7 @@ public class Controller {
 
 	}
 
-	public void listaPessoasM() {
+	public void listaPessoasM() {//lista todos os professores com mestrado
 		professorM.forEach((m) -> {
 			System.out.println("-----------------------------");
 			System.out.println("Nome: " + m.getNome());
@@ -47,7 +47,7 @@ public class Controller {
 		});
 	}
 
-	public void listaTurma() {
+	public void listaTurma() {//lista todas as turmas
 		turma.forEach((t) -> {
 			System.out.println("-----------------------------");
 			System.out.println("Codigo: " + t.getNumero());

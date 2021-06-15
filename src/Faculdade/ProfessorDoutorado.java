@@ -2,7 +2,7 @@ package Faculdade;
 
 public class ProfessorDoutorado extends Professor {
 
-	private int extra = 25;
+	private int extra = 25;//setei o valor do extra por hora, para ser igual para todos 
 	private String tese;
 
 	public ProfessorDoutorado() {
@@ -29,7 +29,7 @@ public class ProfessorDoutorado extends Professor {
 	}
 
 	public double calculaSalario() {
-		return this.getSalario() + (horas * extra);
+		return this.getSalario() + (horas * extra);//faz o salario, pega o salario e soma com a multiplicação das horas pelo extra
 
 	}
 }

@@ -13,11 +13,11 @@ public class Main {
 		ProfessorDoutorado pd = new ProfessorDoutorado();
 		ProfessorMestre pm = new ProfessorMestre();
 		Controller controller = new Controller();
-		Turma t = new Turma();
-
+		
+		Turma t = new Turma();//abre uma turma nova
 		t.setNumero(123);
 		t.setTurno("Manhã");
-		controller.adicionarT(t);
+		controller.adicionarT(t);//insere os dados, e adiciona
 		t = new Turma();		
 		t.setNumero(124);
 		t.setTurno("Manhã");
