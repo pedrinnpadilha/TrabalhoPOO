@@ -54,13 +54,8 @@ public class Controller {
 
 			System.out.println("-----------------------------");
 		});
+	
+		
+	
 	}
-	public static boolean encontrou(ArrayList<Professor> professorD, int codigo) {
-		if(professorD.contains(codigo)) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 }

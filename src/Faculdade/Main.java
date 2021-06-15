@@ -4,22 +4,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		
-		Scanner dados = new Scanner(System.in);
-		Scanner dados6 = new Scanner(System.in);
 
-		
+		Scanner dados = new Scanner(System.in);		
 
 		ProfessorDoutorado pd = new ProfessorDoutorado();
 		ProfessorMestre pm = new ProfessorMestre();
 		Controller controller = new Controller();
 		Turma t = new Turma();
-		
+
 		int numero = 123;
 		t.setNumero(numero);
 		controller.adicionarT(t);
@@ -39,7 +34,6 @@ public class Main {
 		double salario = 0;
 		int horas = 0;
 		int te = 0;
-		
 
 		int numopc = 0;
 
@@ -85,14 +79,14 @@ public class Main {
 					pd.setHoras(horas);
 
 					System.out.println("informe o status da teste (1 Aguardando) (2 Aprovada): ");
-					
+
 					te = teclado.nextInt();
 					if (te == 1) {
-						
+
 						pd.setTese("Aguardando");
 					}
 					if (te == 2) {
-						
+
 						pd.setTese("Aprovada");
 					}
 
@@ -137,9 +131,8 @@ public class Main {
 
 				break;
 			case 5:
-				
-				
-			break;
+
+				break;
 			case 99:
 				System.out.println("Você saiu do programa!");
 				break;
