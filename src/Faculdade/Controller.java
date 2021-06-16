@@ -9,12 +9,12 @@ public class Controller {
 	ArrayList<Professor> professorM = new ArrayList<>();
 	ArrayList<Turma> turma = new ArrayList<>();
 
-	public void adicionarD(Professor d) {//adiciona um professor com doutorado
-		professorD.add(d);
+	public void adicionarD(Professor pd) {//adiciona um professor com doutorado
+		professorD.add(pd);
 	}
 
-	public void adicionarM(Professor m) {//adiciona um professor com mestrado
-		professorM.add(m);
+	public void adicionarM(Professor pm) {//adiciona um professor com mestrado
+		professorM.add(pm);
 	}
 
 	public void adicionarT(Turma t) {//adiciona uma turma
@@ -22,26 +22,26 @@ public class Controller {
 	}
 
 	public void listaPessoasD() {//lista todos os professores com doutorado
-		professorD.forEach((d) -> {
+		professorD.forEach((pd) -> {
 			System.out.println("-----------------------------");
-			System.out.println("Nome: " + d.getNome());
-			System.out.println("Idade: " + d.getIdade());
-			System.out.println("Codigo: " + d.getCodigo());
-			System.out.println("Salario Bruto: " + d.calculaSalario());
-			System.out.println("Horas: " + d.getHoras());
-			System.out.println("Tese: " + d.getTese());
+			System.out.println("Nome: " + pd.getNome());
+			System.out.println("Idade: " + pd.getIdade());
+			System.out.println("Codigo: " + pd.getCodigo());
+			System.out.println("Salario Bruto: " + pd.calculaSalario());
+			System.out.println("Horas: " + pd.getHoras());
+			System.out.println("Tese: " + pd.getTese());
 			System.out.println("-----------------------------");
 		});
 
 	}
 
 	public void listaPessoasM() {//lista todos os professores com mestrado
-		professorM.forEach((m) -> {
+		professorM.forEach((pm) -> {
 			System.out.println("-----------------------------");
-			System.out.println("Nome: " + m.getNome());
-			System.out.println("Idade: " + m.getIdade());
-			System.out.println("Codigo: " + m.getCodigo());
-			System.out.println("Salario: " + m.getSalario());
+			System.out.println("Nome: " + pm.getNome());
+			System.out.println("Idade: " + pm.getIdade());
+			System.out.println("Codigo: " + pm.getCodigo());
+			System.out.println("Salario: " + pm.getSalario());
 
 			System.out.println("-----------------------------");
 		});
