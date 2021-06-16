@@ -116,7 +116,7 @@ public class Main {
 					pm.setHoras(horas);
 
 					controller.adicionarM(pm);
-					pd = new ProfessorDoutorado();
+					pm = new ProfessorMestre();
 				}
 				break;
 			case 2:
