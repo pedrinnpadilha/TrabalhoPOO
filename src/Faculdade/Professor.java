@@ -60,16 +60,15 @@ public class Professor extends Pessoa {
 		return 0;
 	}
 
-	public Object get(int i) {
-		
-		return null;
-	}
+	
 
 	
 	public String getTese() {
 		
 		return null;
 	}
+
+	
 
 	
 }
