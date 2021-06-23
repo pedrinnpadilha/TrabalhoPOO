@@ -2,7 +2,7 @@ package Faculdade;
 
 import Faculdade.Professor;
 
-public abstract class Professor extends Pessoa {
+public class Professor extends Pessoa {
 	protected int codigo;
 	private double salario;
 	protected int horas;

@@ -44,9 +44,8 @@ public class Main {
 
 			System.out.println("__________________MENU______________________\n" + "1-Cadastrar Professor\n"
 					+ "2-Listar Professores com Doutorado\n" + "3-Listar Professores com Mestrado\n"
-					+ "4-Listar Turmas\n" + "5-turma + professor \n" + "6-Pesquisar professor \n"
-					+ "7-Agregar um professor a turma \n"
-					+"99-Sair\n");
+					+ "4-Listar Turmas\n" + "5-Pesquisar professor \n" + "6-Agregar um professor a turma \n"
+					+ "99-Sair\n");
 
 			System.out.print("Número escolhido => ");
 
@@ -74,7 +73,6 @@ public class Main {
 					System.out.println("Codigo: ");
 					codigo = teclado.nextInt();
 					pd.setCodigo(codigo);
-					
 
 					System.out.println("Salario: ");
 					salario = teclado.nextDouble();
@@ -134,12 +132,9 @@ public class Main {
 				break;
 			case 4:
 				controller.listaTurma();
-				
+
 				break;
 			case 5:
-				controller.listarD();
-				break;
-			case 6:
 				Scanner teclado = new Scanner(System.in);
 				System.out.println("Informe se deseja procurar um professor com Doutorado (1) ou Mestrado (2) ");
 				p = teclado.nextInt();
@@ -154,28 +149,39 @@ public class Main {
 					controller.pesquisarM(c);
 				}
 				break;
-			case 7:
-				int e = 0;
-				Scanner tecladoo = new Scanner(System.in);
-				System.out.println("Informe o codigo a ser pesquisado ");
-				int c = tecladoo.nextInt();
-				System.out.println("Informe a turma ");
-				e = tecladoo.nextInt();
-				
-				if (e == 1) {
-					controller.turmam1(c);
+			case 6:				
+				Scanner teclado2 = new Scanner(System.in);
+				System.out.println("Informe se deseja escolher um professor com Doutorado (1) ou Mestrado (2) ");
+				p = teclado2.nextInt();
+				System.out.println("Turmas Cadastradas ");
+				controller.listaTurma();
+				int et;
+				if (p == 1) {					
+					System.out.println("Informe a turma ");
+					et = teclado2.nextInt();
+					System.out.println("Professores Cadastrados");
+					controller.listaPD();
+					System.out.println("Informe o codigo do professor com Doutorado ");
+					int cc = teclado2.nextInt();
+					controller.agregarD(cc, et - 1);
+
 				}
-				if (e == 2) {
-					controller.turmam2(c);
-				}
-				if (e == 3) {
-					controller.turmam3(c);
+				if (p == 2) {
+					System.out.println("Informe a turma ");
+					et = teclado2.nextInt();
+					System.out.println("Professores Cadastrados");
+					controller.listaPM();
+					System.out.println("Informe o codigo professor com Mestrado  ");
+					int cc = teclado2.nextInt();					
+					controller.agregarM(cc, et - 1);
+
 				}
 
 				break;
+
 			case 99:
 				System.out.println("Você saiu do programa!");
-				
+
 				break;
 			default:
 				System.out.println("Opção inválida!");
