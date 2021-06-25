@@ -32,4 +32,9 @@ public class ProfessorDoutorado extends Professor {
 		return this.getSalario() + (horas * extra);//faz o salario, pega o salario e soma com a multiplicação das horas pelo extra
 
 	}
+
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

@@ -3,6 +3,7 @@ package Faculdade;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -13,6 +14,7 @@ public class Main {
 		ProfessorDoutorado pd = new ProfessorDoutorado();
 		ProfessorMestre pm = new ProfessorMestre();
 		Controller controller = new Controller();
+		Random random = new Random();
 
 		Turma t = new Turma();// abre uma turma nova
 		t.setNumero(1);
@@ -37,6 +39,7 @@ public class Main {
 		double salario = 0;
 		int horas = 0;
 		int te = 0;
+		int numero = random.nextInt(200);
 
 		int numopc = 0;
 
@@ -55,7 +58,7 @@ public class Main {
 
 			case 1:
 				System.out.println("Escolha o tipo de cadastro:\n" + "Professor Com Doutorado(aperte 1)\n"
-						+ "Professor Com Mestrado (aperte 2)? \n");
+						+ "Professor Com Mestrado (aperte 2) \n");
 
 				System.out.print("Número escolhido => ");
 				int p = dados.nextInt();
@@ -70,9 +73,8 @@ public class Main {
 					idade = teclado.nextInt();
 					pd.setIdade(idade);
 
-					System.out.println("Codigo: ");
-					codigo = teclado.nextInt();
-					pd.setCodigo(codigo);
+					numero = random.nextInt(200);
+					pd.setCodigo(numero);
 
 					System.out.println("Salario: ");
 					salario = teclado.nextDouble();
@@ -82,8 +84,8 @@ public class Main {
 					horas = teclado.nextInt();
 					pd.setHoras(horas);
 
-					System.out.println("informe o status da teste (1 Aguardando) (2 Aprovada): ");
-
+					System.out.println("informe o status da Tese (1 Aguardando) (2 Aprovada): ");
+					
 					te = teclado.nextInt();
 					if (te == 1) {
 
@@ -96,6 +98,7 @@ public class Main {
 
 					controller.adicionarD(pd);
 					pd = new ProfessorDoutorado();
+					System.out.println("Professor com Doutorado Cadastrado com Sucesso!! ");
 				}
 				if (p == 2) {
 					Scanner teclado = new Scanner(System.in);
@@ -107,9 +110,8 @@ public class Main {
 					idade = teclado.nextInt();
 					pm.setIdade(idade);
 
-					System.out.println("Codigo: ");
-					codigo = teclado.nextInt();
-					pm.setCodigo(codigo);
+					numero = random.nextInt(200);
+					pm.setCodigo(numero);
 
 					System.out.println("Salario: ");
 					salario = teclado.nextInt();
@@ -121,67 +123,45 @@ public class Main {
 
 					controller.adicionarM(pm);
 					pm = new ProfessorMestre();
+					System.out.println("Professor com Mestrado Cadastrado com Sucesso!! ");
 				}
+				if (p > 2) {
+					System.out.println("Opção Errada! ");
+				}
+
 				break;
 			case 2:
 				controller.listaPessoasD();
 				break;
-
 			case 3:
 				controller.listaPessoasM();
 				break;
 			case 4:
 				controller.listaTurma();
-
 				break;
 			case 5:
-				Scanner teclado = new Scanner(System.in);
-				System.out.println("Informe se deseja procurar um professor com Doutorado (1) ou Mestrado (2) ");
-				p = teclado.nextInt();
-				if (p == 1) {
-					System.out.println("Informe o codigo a ser pesquisado ");
-					int c = teclado.nextInt();
-					controller.pesquisarD(c);
-				}
-				if (p == 2) {
-					System.out.println("Informe o codigo a ser pesquisado ");
-					int c = teclado.nextInt();
-					controller.pesquisarM(c);
-				}
+				controller.pesquisar();
 				break;
-			case 6:				
+			case 6:
 				Scanner teclado2 = new Scanner(System.in);
 				System.out.println("Informe se deseja escolher um professor com Doutorado (1) ou Mestrado (2) ");
 				p = teclado2.nextInt();
-				System.out.println("Turmas Cadastradas ");
-				controller.listaTurma();
-				int et;
-				if (p == 1) {					
-					System.out.println("Informe a turma ");
-					et = teclado2.nextInt();
-					System.out.println("Professores Cadastrados");
-					controller.listaPD();
-					System.out.println("Informe o codigo do professor com Doutorado ");
-					int cc = teclado2.nextInt();
-					controller.agregarD(cc, et - 1);
-
+				if (p == 1) {
+					System.out.println("Turmas Cadastradas "); // lista todas as turmas cadastradas
+					controller.listaTurma();
+					controller.agregarD();
 				}
 				if (p == 2) {
-					System.out.println("Informe a turma ");
-					et = teclado2.nextInt();
-					System.out.println("Professores Cadastrados");
-					controller.listaPM();
-					System.out.println("Informe o codigo professor com Mestrado  ");
-					int cc = teclado2.nextInt();					
-					controller.agregarM(cc, et - 1);
-
+					System.out.println("Turmas Cadastradas "); // lista todas as turmas cadastradas
+					controller.listaTurma();
+					controller.agregarM();
 				}
-
+				if (p > 2) {
+					System.out.println("Opção Errada! ");
+				}
 				break;
-
 			case 99:
 				System.out.println("Você saiu do programa!");
-
 				break;
 			default:
 				System.out.println("Opção inválida!");
