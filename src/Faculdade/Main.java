@@ -9,12 +9,14 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-		Scanner dados = new Scanner(System.in);
+	
 
 		ProfessorDoutorado pd = new ProfessorDoutorado();
 		ProfessorMestre pm = new ProfessorMestre();
 		Controller controller = new Controller();
 		Random random = new Random();
+		
+		Scanner dados = new Scanner(System.in);
 
 		Turma t = new Turma();// abre uma turma nova
 		t.setNumero(1);
@@ -35,7 +37,6 @@ public class Main {
 
 		String nome = "";
 		int idade = 0;
-		int codigo = 0;
 		double salario = 0;
 		int horas = 0;
 		int te = 0;
