@@ -139,6 +139,7 @@ public class Controller {
 	public void agregarD() {// Alocar um professor com Doutorado a uma turma
 		Scanner teclado2 = new Scanner(System.in);
 		int et = 0;
+		int contador1=0;
 		String teste = null;
 		
 		if (professorD.isEmpty()) {
@@ -157,6 +158,7 @@ public class Controller {
 
 						teste = professorD.get(i).getNome();
 						turma.get(et).setProf(teste);
+						contador1++;
 					
 
 					}
@@ -164,14 +166,21 @@ public class Controller {
 			} else {
 				System.out.println("Turma Inválida");
 			}
+			
 
 		}
+		if (contador1 == 0) {
+			System.out.println("Nenhum Professor encontrado!");
 
+		}
+		else {System.out.println("Cadastrado com sucesso");}
+			
 	}
 
 	public void agregarM() {// Alocar um professor com Mestrado a uma turma
 		Scanner teclado2 = new Scanner(System.in);
 		int et = 0;
+		int contador2=0;
 		String teste = null;
 		if (professorM.isEmpty()) {
 			System.out.println("Nenhum Professor cadastrado!");
@@ -189,6 +198,7 @@ public class Controller {
 
 						teste = professorM.get(i).getNome();
 						turma.get(et).setProf(teste);
+						contador2++;
 
 					}
 				}
@@ -198,5 +208,10 @@ public class Controller {
 			}
 
 		}
+		if (contador2 == 0) {
+			System.out.println("Nenhum Professor encontrado!");
+
+		}else {System.out.println("Cadastrado com sucesso");}
 	}
+	
 }
